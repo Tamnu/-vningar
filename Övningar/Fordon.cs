@@ -26,13 +26,18 @@ namespace Övningar
         }
         public override string ToString()
         {
-            return ":"+reg+" :"+ märke + " :" + modell;
+            return reg+ "  " + märke + "  " + modell + "  " + typ;
         }
         public fordonstyp Typ
-
         {
 
-            get { return Typ; }
+            get { return typ; }
+
+        }
+        public string Reg
+        {
+
+            get { return reg; }
 
         }
     }

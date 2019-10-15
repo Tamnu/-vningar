@@ -68,9 +68,9 @@
             // lbxVisa
             // 
             this.lbxVisa.FormattingEnabled = true;
-            this.lbxVisa.Location = new System.Drawing.Point(519, 46);
+            this.lbxVisa.Location = new System.Drawing.Point(383, 46);
             this.lbxVisa.Name = "lbxVisa";
-            this.lbxVisa.Size = new System.Drawing.Size(171, 160);
+            this.lbxVisa.Size = new System.Drawing.Size(401, 160);
             this.lbxVisa.TabIndex = 3;
             // 
             // cbxTyp
@@ -117,6 +117,7 @@
             this.rdbBilar.TabStop = true;
             this.rdbBilar.Text = "Bilar";
             this.rdbBilar.UseVisualStyleBackColor = true;
+            this.rdbBilar.CheckedChanged += new System.EventHandler(this.RdbBilar_CheckedChanged);
             // 
             // rdbMC
             // 
@@ -128,6 +129,7 @@
             this.rdbMC.TabStop = true;
             this.rdbMC.Text = "MC";
             this.rdbMC.UseVisualStyleBackColor = true;
+            this.rdbMC.CheckedChanged += new System.EventHandler(this.RdbMC_CheckedChanged);
             // 
             // label1
             // 
