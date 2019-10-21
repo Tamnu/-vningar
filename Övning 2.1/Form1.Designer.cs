@@ -102,6 +102,7 @@
             this.btnBok.TabIndex = 6;
             this.btnBok.Text = "Registrera bok";
             this.btnBok.UseVisualStyleBackColor = true;
+            this.btnBok.Click += new System.EventHandler(this.BtnBok_Click);
             // 
             // btnLjud
             // 
@@ -159,7 +160,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(254, 118);
+            this.label4.Location = new System.Drawing.Point(251, 118);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(39, 13);
             this.label4.TabIndex = 13;
