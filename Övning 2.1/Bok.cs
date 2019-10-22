@@ -18,5 +18,14 @@ namespace Övning_2._1
         {
             return _title + ": " + _antalsidor + " sidor";
         }
+
+        public int antalsidor
+        {
+            get
+            {
+                return this._antalsidor;
+                            
+            }
+        }
     }
 }

@@ -15,5 +15,17 @@ namespace Övning_2._1
         {
             this._upplösning = upplösning;
         }
+        public override string ToString()
+        {
+            return _title + ": " + _speltid + " minuter " + _upplösning; 
+        }
+
+        public string upplösning
+        {
+            get
+            {
+                return this._upplösning;
+            }
+        }
     }
 }
