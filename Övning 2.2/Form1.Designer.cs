@@ -153,6 +153,7 @@
             this.btnSäljare.TabIndex = 13;
             this.btnSäljare.Text = "Registrera försäljning";
             this.btnSäljare.UseVisualStyleBackColor = true;
+            this.btnSäljare.Click += new System.EventHandler(this.BtnSäljare_Click);
             // 
             // btnKonsult
             // 
@@ -162,6 +163,7 @@
             this.btnKonsult.TabIndex = 14;
             this.btnKonsult.Text = "Registera arbetattid";
             this.btnKonsult.UseVisualStyleBackColor = true;
+            this.btnKonsult.Click += new System.EventHandler(this.BtnKonsult_Click);
             // 
             // btnKontor
             // 
@@ -171,6 +173,7 @@
             this.btnKontor.TabIndex = 15;
             this.btnKontor.Text = "Registrera månadslön";
             this.btnKontor.UseVisualStyleBackColor = true;
+            this.btnKontor.Click += new System.EventHandler(this.BtnKontor_Click);
             // 
             // label1
             // 

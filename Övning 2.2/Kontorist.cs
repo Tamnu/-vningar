@@ -6,7 +6,24 @@ using System.Threading.Tasks;
 
 namespace Övning_2._2
 {
-    class Kontorist
+    class Kontorist : Anställd
     {
+        double _månadsLön;
+
+        public Kontorist(string namn, double månadsLön): base(namn)
+        {
+            this._namn = namn;
+            this._månadsLön = månadsLön;
+
+        }
+        public override string ToString()
+        {
+            return _namn + " (Kontorist)";
+        }
+        public override double beräkna()
+        {
+            { return _månadsLön; }
+        }
+        
     }
 }

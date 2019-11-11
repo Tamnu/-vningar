@@ -14,5 +14,9 @@ namespace Övning_2._2
         {
             this._namn = namn;
         }
+        public virtual double beräkna()
+        {
+            { return 0; }
+        }
     }
 }

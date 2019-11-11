@@ -16,5 +16,14 @@ namespace Övning_2._2
             this._arbetadeTimmar = arbetadeTimmar;
             this._timLön = timLön;
         }
+        public override string ToString()
+        {
+            return _namn + " (Konsult)";
+        }
+        public override double beräkna()
+        {
+            { return _arbetadeTimmar * _timLön; }
+        
+        }
     }
 }

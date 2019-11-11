@@ -16,5 +16,13 @@ namespace Övning_2._2
             this._försäljning = försäljning;
             this._provition = provition;
         }
+        public override string ToString()
+        {
+            return _namn + " (säljare)";
+        }
+        public override double beräkna()
+        {
+            { return _försäljning * _provition; }
+        }
     }
 }
