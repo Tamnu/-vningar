@@ -27,8 +27,10 @@ namespace Övning_2._2
                 double försäljning = double.Parse(tbxFörsäljning.Text);
 
                 Säljare säljare = new Säljare(namnSäljare, provition, försäljning);
-                lbxRegistrera.Items.Add(säljare);
                 banklist.Add(säljare);
+                lbxRegistrera.Items.Add(säljare);
+                lbxLön.Items.Add(säljare + ":" + säljare.beräkna());
+                
             }
             catch
             {
@@ -47,6 +49,7 @@ namespace Övning_2._2
                 Konsult konsult = new Konsult(namnKonsult, Arbetstid, Timlön);
                 banklist.Add(konsult);
                 lbxRegistrera.Items.Add(konsult);
+                lbxLön.Items.Add(konsult + ":" + konsult.beräkna());
             }
             catch
             {
@@ -64,6 +67,7 @@ namespace Övning_2._2
                 banklist.Add(kontorist);
                 lbxRegistrera.Items.Add(kontorist);
                 lbxLön.Items.Add(kontorist);
+                lbxLön.Items.Add(kontorist + ":" + kontorist.beräkna());
             }
             catch
             {
@@ -71,6 +75,16 @@ namespace Övning_2._2
             }
 
 
+        }
+
+        private void BtnBeräkna_Click(object sender, EventArgs e)
+        {
+            double total = 0;
+            foreach(Anställd a in banklist)
+            {
+                total = total + a.beräkna();
+            }
+            btnTotallön.Text = total.ToString();
         }
     }
 }

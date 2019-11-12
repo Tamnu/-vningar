@@ -22,7 +22,7 @@ namespace Övning_2._2
         }
         public override double beräkna()
         {
-            { return _försäljning * _provition; }
+             return _försäljning * _provition; 
         }
     }
 }

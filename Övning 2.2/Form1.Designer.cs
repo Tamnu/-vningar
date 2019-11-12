@@ -128,6 +128,7 @@
             this.btnBeräkna.TabIndex = 10;
             this.btnBeräkna.Text = "Beräkna lön";
             this.btnBeräkna.UseVisualStyleBackColor = true;
+            this.btnBeräkna.Click += new System.EventHandler(this.BtnBeräkna_Click);
             // 
             // lbxRegistrera
             // 
