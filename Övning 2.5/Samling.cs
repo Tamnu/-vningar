@@ -6,51 +6,65 @@ using System.Threading.Tasks;
 
 namespace Övning_2._5
 {
-    class Samling
+    
+    public class Samling<T >
     {
-    }
-}
-public class Samling<T>
-{
-    protected int buffert;
-    protected T[] lista;
+        protected int buffert;
+        protected T[] lista;
 
-    protected int längd;
-    protected int antal;
+        protected int längd;
+        protected int antal;
 
-    public Samling()
-    {
-        buffert = 30;
-        antal = 0;
-        längd = 30;
-        lista = new T[längd];
-    }
-    protected void Expandera ( int storlek)
-    {
-        if (storlek < 1) return;
-
-        T[] temp = new T[längd + storlek];
-
-        for(int i = 0; i<antal; i++)
+        public Samling()
         {
-            temp[i] = lista[i];
-            lista = temp;
-            längd += storlek;
+            buffert = 30;
+            antal = 0;
+            längd = 30;
+            lista = new T[längd];
         }
-    }
-    protected void Reducera()
-    {
-        T[] temp = new T[antal];
-
-        for( int i = 0; i< antal; i++)
+        protected void Expandera(int storlek)
         {
-            temp[i] = lista[i];
-            lista = temp;
-            längd = antal;
+            if (storlek < 1) return;
+
+            T[] temp = new T[längd + storlek];
+
+            for (int i = 0; i < antal; i++)
+            {
+                temp[i] = lista[i];
+                lista = temp;
+                längd += storlek;
+            }
         }
-    }
-    public void LäggTill(T e)
-    {
+        protected void Reducera()
+        {
+            T[] temp = new T[antal];
+
+            for (int i = 0; i < antal; i++)
+            {
+                temp[i] = lista[i];
+                lista = temp;
+                längd = antal;
+            }
+        }
+        public void LäggTill(T e)
+        {
+            if (antal + 1 > längd) Expandera(1 + buffert);
+            lista[antal++] = e;
+
+        }
+        public T Tabort(int index)
+        {
+            T temp = lista[index];
+            for (int i = index; i < antal - 1; i++)
+            {
+                lista[i] = lista[i + 1];
+            }
+            antal--;
+
+            if (längd - antal > buffert) Reducera();
+            return temp;
+        }
+        public T ElementFrån ( int index )
 
     }
 }
