@@ -65,6 +65,30 @@ namespace Övning_2._5
             return temp;
         }
         public T ElementFrån ( int index )
-
+        {
+            return lista[index];
+        }
+        public bool Har (T element)
+        {
+            for(int i = 0; i <lista.Length; i++)
+            {
+                if (lista[i].Equals(element)) return true;
+            }
+            return false;
+        }
+        public int Sök ( T element )
+        {
+            for (int i = 0; i < lista.Length; i++)
+            {
+                if (lista[i].Equals(element)) return i;
+            }
+            return -1;
+        }
+        public void LäggTill(Samling<T> samling)
+        {
+            if (antal + samling.lista.Length > längd)
+                Expandera(samling.lista.Length + buffert);
+            for (int i = 0; i < samling.lista.Length; i++) lista[antal++] = samling.lista[i];
+        }
     }
 }
