@@ -91,4 +91,5 @@ namespace Övning_2._5
             for (int i = 0; i < samling.lista.Length; i++) lista[antal++] = samling.lista[i];
         }
     }
+    
 }
