@@ -19,7 +19,7 @@ namespace Övning_2._8_Inköpslista
 
         public virtual double BeräknaPris()
         {
-            return 0;
+            return 0 ;
         }
     }
 }

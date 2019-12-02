@@ -9,9 +9,9 @@ namespace Övning_2._8_Inköpslista
     class StyckSak : Vara
     {
         double styckPris;
-        int antal;
+        double antal;
 
-        public StyckSak(string namn,double _stckPris, int _antal) : base(namn)
+        public StyckSak(string namn,double _stckPris, double _antal) : base(namn)
         {
             this.styckPris = _stckPris;
             this.antal = _antal;
@@ -24,5 +24,6 @@ namespace Övning_2._8_Inköpslista
         {
             return namn + " " + antal + " st. ";
         }
+
     }
 }

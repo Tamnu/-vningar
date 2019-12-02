@@ -13,6 +13,7 @@ namespace Övning_2._8_Inköpslista
     public partial class Form1 : Form
     {
         List<Vara> korg = new List<Vara>();
+        double summa = 0;
         public Form1()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Övning_2._8_Inköpslista
             {
                 string vara = tbxVara.Text;
                 double pris = double.Parse(tbxPris.Text);
-                int mängd = int.Parse(tbxMängd.Text);
+                double mängd = int.Parse(tbxMängd.Text);
 
                 if (RbtnLös.Checked == true)
                 {
@@ -38,6 +39,12 @@ namespace Övning_2._8_Inköpslista
                     korg.Add(stycksak);
                     lbxVisa.Items.Add(stycksak+ "" + stycksak.BeräknaPris() + "kr");
                 }
+                
+                foreach(Vara s in korg)
+                {
+                    summa = summa + s.BeräknaPris();
+                }
+                tbxSumma.Text = summa.ToString();
             }
             catch
             {
