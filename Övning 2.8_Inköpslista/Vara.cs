@@ -21,5 +21,10 @@ namespace Övning_2._8_Inköpslista
         {
             return 0 ;
         }
+
+        public override string ToString()
+        {
+            return this.namn + "Du får fixa så att priset räkas ut och står här";
+        }
     }
 }

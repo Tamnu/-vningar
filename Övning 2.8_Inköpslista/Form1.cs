@@ -13,7 +13,7 @@ namespace Övning_2._8_Inköpslista
     public partial class Form1 : Form
     {
         List<Vara> korg = new List<Vara>();
-        double summa = 0;
+        
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +23,7 @@ namespace Övning_2._8_Inköpslista
         {
             try
             {
+                double summa = 0;
                 string vara = tbxVara.Text;
                 double pris = double.Parse(tbxPris.Text);
                 double mängd = int.Parse(tbxMängd.Text);
@@ -31,13 +32,13 @@ namespace Övning_2._8_Inköpslista
                 {
                     LösVikt lösvikt = new LösVikt(vara, pris, mängd);
                     korg.Add(lösvikt);
-                    lbxVisa.Items.Add(lösvikt + "" + lösvikt.BeräknaPris() + "kr");
+                    lbxVisa.Items.Add(lösvikt);
                 }
                 if (RbtnStycksak.Checked == true)
                 {
                     StyckSak stycksak = new StyckSak(vara, pris, mängd);
                     korg.Add(stycksak);
-                    lbxVisa.Items.Add(stycksak+ "" + stycksak.BeräknaPris() + "kr");
+                    lbxVisa.Items.Add(stycksak);
                 }
                 
                 foreach(Vara s in korg)
@@ -48,8 +49,25 @@ namespace Övning_2._8_Inköpslista
             }
             catch
             {
-
+                MessageBox.Show("Fel inmatning");
             }
+
+        }
+
+        private void Btnremove_Click(object sender, EventArgs e)
+        {
+            Vara m = lbxVisa.SelectedItem as Vara;
+            korg.Remove(m); 
+            lbxVisa.Items.Clear();
+            foreach(Vara s in korg)
+            {
+                lbxVisa.Items.Add(s + "" + s.BeräknaPris() + "Kr");
+            }
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }

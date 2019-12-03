@@ -22,7 +22,7 @@ namespace Övning_2._8_Inköpslista
         }
         public override string ToString()
         {
-            return namn + " " + antal + " st. ";
+            return namn + " " + antal + " st. " + BeräknaPris();
         }
 
     }

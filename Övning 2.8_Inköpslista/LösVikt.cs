@@ -19,7 +19,7 @@ namespace Övning_2._8_Inköpslista
         }
         public override string ToString()
         {
-            return namn + " "+ vikt + " kg. " ;
+            return namn + " " + vikt + " kg. " + BeräknaPris();
         }
         public override double BeräknaPris()
         {
