@@ -41,6 +41,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnLäggtill = new System.Windows.Forms.Button();
             this.btnremove = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.colorDialog2 = new System.Windows.Forms.ColorDialog();
             this.SuspendLayout();
             // 
             // tbxVara
@@ -198,6 +200,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnLäggtill;
         private System.Windows.Forms.Button btnremove;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ColorDialog colorDialog2;
     }
 }
 
