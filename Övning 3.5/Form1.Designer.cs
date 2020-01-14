@@ -106,7 +106,7 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.Text = "Form1";
+            this.Text = "¨åå";
             this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
