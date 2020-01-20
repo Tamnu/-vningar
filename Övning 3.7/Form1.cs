@@ -12,6 +12,7 @@ namespace Övning_3._7
 {
     public partial class Form1 : Form
     {
+        private List<Matcher> matcher = new List<Matcher>();
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +22,32 @@ namespace Övning_3._7
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             
+        }
+
+        private void DataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            int i = e.RowIndex;
+            
+            if(e.ColumnIndex == 0)
+            {
+                matcher[i].hemmalag = (string)dataGridView1.Rows[i].Cells[0].Value;
+            }
+            else if(e.ColumnIndex == 1){
+                matcher[i].bortalag = (string)dataGridView1.Rows[i].Cells[1].Value;
+
+            }
+            else if(e.ColumnIndex == 2)
+            {
+                matcher[i].målhemmalag
+            }
+
+
+        }
+
+        private void DataGridView1_UserAddedRow(object sender, DataGridViewRowEventArgs e)
+        {
+            Matcher nymatch = new Matcher();
+            matcher.Add(nymatch);
         }
     }
 }
